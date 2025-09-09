@@ -1,17 +1,18 @@
-# Stable Streamlit version
+# Streamlit (pinned to avoid version conflicts)
 streamlit==1.19.0
 
-# NLP & ML
+# NLP / ML
+spacy==3.8.7
 sentence-transformers==2.2.2
+nltk==3.9.1
 scikit-learn==1.7.2
-numpy==2.3.2
+numpy==1.24.0
 pandas==2.3.2
+torch==2.8.0
+transformers==4.56.1
 PyPDF2==3.0.1
 python-docx==1.2.0
-spacy==3.8.7
-nltk==3.9.1
 openai==1.107.0
 
-# Optional visualization
+# Visualization / Utilities
 matplotlib==3.10.6
-altair==4.2.0
