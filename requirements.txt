@@ -1,14 +1,14 @@
-#Core ML / NLP
+Core ML / NLP
 
 torch>=2.5.0
 transformers>=4.30.0
 sentence-transformers>=2.2.2
-spacy>=3.8.7
+spacy>=3.7.0,<3.8.0
 nltk>=3.9.1
 scikit-learn>=1.7.2
 
 
-#Data & utils
+Data & utils
 
 numpy>=1.24.0
 pandas>=1.5.3
@@ -18,7 +18,7 @@ matplotlib>=3.7.1
 altair>=5.0.0
 
 
-#Streamlit + UI
+Streamlit + UI
 
 streamlit>=1.19.0
 rich>=14.1.0
@@ -27,12 +27,13 @@ mdurl>=0.1.2
 pygments>=2.19.2
 
 
-#APIs
+APIs
 
 openai>=1.107.0
 
 
-#Additional dependencies
+Additional dependencies
 
 en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.0/en_core_web_sm-3.7.0-py3-none-any.whl
+
 
