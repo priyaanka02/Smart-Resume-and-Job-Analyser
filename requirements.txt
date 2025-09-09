@@ -1,0 +1,10 @@
+streamlit>=1.20.0
+sentence-transformers>=2.2.2
+scikit-learn
+numpy
+pandas
+PyPDF2
+python-docx
+spacy
+nltk
+openai
