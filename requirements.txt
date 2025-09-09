@@ -12,7 +12,7 @@ spacy
 nltk
 openai
 
-# Optional visualization
+# Visualization
 matplotlib
-
+altair
 
