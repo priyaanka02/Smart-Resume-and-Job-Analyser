@@ -1,10 +1,20 @@
 # app.py
 import streamlit as st
+import spacy
+import subprocess
+
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    # Download the model if not found
+    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
+    nlp = spacy.load("en_core_web_sm")
+
 from sentence_transformers import SentenceTransformer
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 import PyPDF2, docx, io, os, re, json
-import nltk, spacy
+import nltk
 from collections import Counter, defaultdict
 import openai
 from difflib import SequenceMatcher
@@ -1488,3 +1498,4 @@ APPLICATION STRATEGY:
             mime="text/plain",
             use_container_width=True
         )
+
