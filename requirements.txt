@@ -1,18 +1,26 @@
-# Streamlit (pinned to avoid version conflicts)
+# Streamlit & core
 streamlit==1.19.0
+rich==14.1.0
+markdown-it-py==4.0.0
+mdurl==0.1.2
+pygments==2.19.2
 
-# NLP / ML
+# NLP & Transformers
 spacy==3.8.7
 sentence-transformers==2.2.2
 nltk==3.9.1
-scikit-learn==1.7.2
+transformers==4.30.0
+torch==2.0.1
+
+# Data processing
 numpy==1.24.0
-pandas==2.3.2
-torch==2.8.0
-transformers==4.56.1
+pandas==1.5.3
+scikit-learn==1.7.2
+
+# File parsing
 PyPDF2==3.0.1
 python-docx==1.2.0
-openai==1.107.0
 
-# Visualization / Utilities
-matplotlib==3.10.6
+# Misc
+matplotlib==3.7.1
+openai==1.107.0
