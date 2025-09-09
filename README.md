@@ -5,7 +5,7 @@
 
 ![Python](https://img.shields.io/badge/python-v3.8+-blue.svg)
 ![Streamlit](https://img.shields.io/badge/streamlit-latest-red.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
+
 
 ## ✨ Features
 
@@ -35,6 +35,9 @@
 - Robust text extraction
 
 ## 🚀 Getting Started
+
+You can just test the app by using this link :
+OR proceed as below : 
 
 ### Prerequisites
 
@@ -91,7 +94,7 @@ smart-resume-analyzer/
 ├── app.py                 # Main Streamlit application
 ├── requirements.txt       # Python dependencies
 ├── README.md             # Project documentation
-└── assets/               # Static assets (if any)
+
 ```
 
 ## 🎨 Key Features Explained
@@ -114,15 +117,7 @@ Handles variations in spelling and terminology to ensure comprehensive skill det
 - **Experience Relevance**: How well your experience aligns with job responsibilities
 - **Technical Skills Match**: Percentage of required technical skills you possess
 
-## 🤝 Contributing
 
-Contributions are welcome! Here's how you can help:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## 📝 Requirements
 
