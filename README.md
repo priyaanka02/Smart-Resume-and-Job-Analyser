@@ -124,16 +124,17 @@ Handles variations in spelling and terminology to ensure comprehensive skill det
 Create a `requirements.txt` file with:
 
 ```txt
-streamlit>=1.28.0
-sentence-transformers>=2.2.0
-scikit-learn>=1.3.0
-PyPDF2>=3.0.0
-python-docx>=0.8.11
-nltk>=3.8
-spacy>=3.6.0
-matplotlib>=3.7.0
-numpy>=1.24.0
-```
+streamlit==1.19.0
+sentence-transformers==2.2.2
+scikit-learn
+PyPDF2
+python-docx
+nltk
+spacy
+openai
+matplotlib
+numpy
+pandas
 
 ## 🔧 Troubleshooting
 
