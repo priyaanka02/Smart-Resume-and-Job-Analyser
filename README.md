@@ -1,7 +1,7 @@
 # Smart-Resume-and-Job-Analyser
 # 🎯 Smart Resume × Job Analyzer
 
-[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Clickhttps://smart-resume-and-job-analyser-
+[!][Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Clickhttps://smart-resume-and-job-analyser-cqy5h8ehpzag8oihj6zl7j.streamlit.app/
 
 
 ***
