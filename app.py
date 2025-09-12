@@ -432,7 +432,7 @@ def load_model_with_timeout():
         signal.alarm(0)
 
 
-model = load_model()
+model = load_model_with_timeout()
 
 # -------------------------
 # Enhanced Matching Utilities
