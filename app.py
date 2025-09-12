@@ -8,18 +8,33 @@ import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 import PyPDF2, docx, io, os, re, json
 from collections import Counter, defaultdict
-import openai
+#import openai
 from difflib import SequenceMatcher
 import altair as alt
 import matplotlib.pyplot as plt
 
-# Load spaCy model
+# Load spaCy model with better error handling
 try:
     nlp = spacy.load("en_core_web_sm")
 except OSError:
-    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
-    nlp = spacy.load("en_core_web_sm")
+    try:
+        # Try to download the model
+        subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"], check=True)
+        nlp = spacy.load("en_core_web_sm")
+    except:
+        st.warning("SpaCy model could not be loaded. Some features may be limited.")
+        nlp = None
 
+# error handling for NLTK downloads
+try:
+    import nltk
+    nltk.download("punkt", quiet=True)
+    nltk.download("stopwords", quiet=True)  
+    nltk.download("wordnet", quiet=True)
+    from nltk.corpus import stopwords, wordnet
+    STOP_WORDS = set(stopwords.words('english'))
+except:
+    STOP_WORDS = set(['the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by'])
 
 # -------------------------
 # Modern Professional Styling
@@ -403,28 +418,13 @@ modern_ui_css()
 # -------------------------
 st.set_page_config(page_title="Smart Resume Analyzer", layout="wide")
 
-try:
-    import nltk
-    nltk.download("punkt", quiet=True)
-    nltk.download("stopwords", quiet=True)
-    nltk.download("wordnet", quiet=True)  # Added for synonym recognition
-    from nltk.corpus import stopwords, wordnet
-    STOP_WORDS = set(stopwords.words('english'))
-except:
-    STOP_WORDS = set(['the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by'])
-
-try:
-    nlp = spacy.load("en_core_web_sm")
-except:
-    st.warning("SpaCy model not found. Using simplified processing.")
-    nlp = None
 
 @st.cache_resource
 def load_model():
     try:
         return SentenceTransformer("all-MiniLM-L6-v2")
-    except:
-        st.warning("Sentence transformer model not loaded. Using simplified matching.")
+    except Exception as e:
+        st.warning(f"Could not load sentence transformer model: {e}")
         return None
 
 model = load_model()
@@ -1500,5 +1500,6 @@ APPLICATION STRATEGY:
             mime="text/plain",
             use_container_width=True
         )
+
 
 
