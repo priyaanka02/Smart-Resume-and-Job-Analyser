@@ -419,13 +419,18 @@ modern_ui_css()
 st.set_page_config(page_title="Smart Resume Analyzer", layout="wide")
 
 
-@st.cache_resource
-def load_model():
+@st.cache_resource(ttl=3600)  # Cache for 1 hour
+def load_model_with_timeout():
     try:
+        import signal
+        signal.alarm(180)  # 3-minute timeout
         return SentenceTransformer("all-MiniLM-L6-v2")
     except Exception as e:
-        st.warning(f"Could not load sentence transformer model: {e}")
+        st.warning(f"Model loading failed: {e}")
         return None
+    finally:
+        signal.alarm(0)
+
 
 model = load_model()
 
@@ -1500,6 +1505,7 @@ APPLICATION STRATEGY:
             mime="text/plain",
             use_container_width=True
         )
+
 
 
 
