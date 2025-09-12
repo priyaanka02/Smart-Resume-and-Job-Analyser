@@ -12,6 +12,8 @@ from difflib import SequenceMatcher
 import altair as alt
 import matplotlib.pyplot as plt
 
+nlp = None
+
 # error handling for NLTK downloads
 try:
     import nltk
@@ -1488,6 +1490,7 @@ APPLICATION STRATEGY:
             mime="text/plain",
             use_container_width=True
         )
+
 
 
 
