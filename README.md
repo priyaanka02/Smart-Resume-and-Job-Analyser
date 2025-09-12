@@ -193,7 +193,7 @@ smart-resume-analyzer/
 ├── requirements.txt       # Dependencies
 ├── packages.txt          # System dependencies
 ├── README.md            # This file
-└── runtime.txt          # Python version
+
 ```
 
 ***
