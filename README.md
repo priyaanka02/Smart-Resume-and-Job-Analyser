@@ -1,11 +1,7 @@
 # Smart-Resume-and-Job-Analyser
 # 🎯 Smart Resume × Job Analyzer
 
-[![Live Demo] - Alt text for the badge
-
-(https://img.shields.io/badge/🚀_Live_Demo-Click_Here-brightgreen?style=for-the-badge) - Badge image URL
-
-](https://smart-resume-and-job-analyser-cqy5h8ehpzag8oihj6zl7j.streamlit.app/) - Link destination
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Click_Here-brightgreen?style=for-the-badge)](https://smart-resume-and-job-analyser-cqy5h8ehpzag8oihj6zl7j.streamlit.app/) - Link destination
 
 ***
 
