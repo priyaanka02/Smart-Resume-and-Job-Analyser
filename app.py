@@ -1,6 +1,5 @@
 # app.py
 import streamlit as st
-import spacy
 import subprocess
 import nltk
 from sentence_transformers import SentenceTransformer
@@ -12,18 +11,6 @@ from collections import Counter, defaultdict
 from difflib import SequenceMatcher
 import altair as alt
 import matplotlib.pyplot as plt
-
-# Load spaCy model with better error handling
-try:
-    nlp = spacy.load("en_core_web_sm")
-except OSError:
-    try:
-        # Try to download the model
-        subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"], check=True)
-        nlp = spacy.load("en_core_web_sm")
-    except:
-        st.warning("SpaCy model could not be loaded. Some features may be limited.")
-        nlp = None
 
 # error handling for NLTK downloads
 try:
@@ -1501,6 +1488,7 @@ APPLICATION STRATEGY:
             mime="text/plain",
             use_container_width=True
         )
+
 
 
 
